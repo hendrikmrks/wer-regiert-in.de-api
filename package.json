@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build": "mkdir -p dist && cp -r app.js package.json package-lock.json node_modules dist/ && cp -r public dist/ 2>/dev/null || true"
   },
   "dependencies": {
     "axios": "^1.6.0",
